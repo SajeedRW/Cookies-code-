@@ -1,0 +1,6 @@
+{
+    "routes": [
+      { "src": "/set-cookie", "dest": "/set-cookie.html" }
+    ]
+  }
+  
