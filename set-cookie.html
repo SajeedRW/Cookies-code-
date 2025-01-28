@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Cookies</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const daysToExpire = 365;
+            const expirationDate = new Date();
+            expirationDate.setDate(expirationDate.getDate() + daysToExpire);
+
+            document.cookie = "thisislogincookieforbeta=allowed; path=/; SameSite=Strict";
+            document.cookie = `thisislogincookieforbeta=allowed; path=/; domain=beta.researchwire.in; expires=${expirationDate.toUTCString()}; SameSite=Lax; secure`;
+
+            alert("Cookies have been set!");
+        });
+    </script>
+</head>
+<body>
+    <h1>Cookies are being set...</h1>
+    <p>You can close this tab now.</p>
+</body>
+</html>
